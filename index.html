@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
+      --app-height: 100vh;
       --bg-1: #040507;
       --bg-2: #0b1018;
       --panel: rgba(10, 14, 21, 0.88);
@@ -34,8 +35,15 @@
       font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
     }
 
+    @supports (height: 100dvh) {
+      :root {
+        --app-height: 100dvh;
+      }
+    }
+
     body {
-      min-height: 100svh;
+      height: var(--app-height);
+      min-height: var(--app-height);
     }
 
     a {
@@ -57,8 +65,9 @@
 
     .shell {
       display: grid;
-      grid-template-rows: auto 1fr auto;
-      min-height: 100svh;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      height: var(--app-height);
+      min-height: var(--app-height);
     }
 
     header {
@@ -152,6 +161,7 @@
 
     .game-wrap {
       min-height: 0;
+      overflow: hidden;
       background: #04070d;
       border-top: 1px solid #0d121a;
       border-bottom: 1px solid #0d121a;
@@ -281,5 +291,32 @@
       </div>
     </footer>
   </main>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      let rafId = 0;
+
+      const applyHeight = () => {
+        rafId = 0;
+        const viewport = window.visualViewport;
+        const height = viewport ? viewport.height : window.innerHeight;
+        root.style.setProperty("--app-height", `${Math.round(height)}px`);
+      };
+
+      const scheduleHeightUpdate = () => {
+        if (rafId) return;
+        rafId = window.requestAnimationFrame(applyHeight);
+      };
+
+      applyHeight();
+      window.addEventListener("resize", scheduleHeightUpdate, { passive: true });
+      window.addEventListener("orientationchange", scheduleHeightUpdate, { passive: true });
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", scheduleHeightUpdate, { passive: true });
+        window.visualViewport.addEventListener("scroll", scheduleHeightUpdate, { passive: true });
+      }
+    }());
+  </script>
 </body>
 </html>
