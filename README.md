@@ -4,6 +4,8 @@ In a world of secrets and shadows, only the unseen survive. As an elite agent in
 
 **Official Website:** https://sullydux.github.io/Secret-Warfare/
 
+**Developer:** [Sullydux](https://github.com/sullydux)
+
 ---
 
 ## How to Get Started
