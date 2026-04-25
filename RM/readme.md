@@ -16,6 +16,18 @@ Notice: level one has reports of being complicated, so I'd recomend paper or to 
 
 ---
 
+## Controls on a Mobile
+
+Make sure to press the mobile button in the level section menu. There will be a joystick and other buttons if needed. Because of what I coded it on you can not interact with multiple buttons/joystick at the same time. If it says click or press just tap the screen.
+
+---
+
+## Controls on a Computer
+
+Make sure the the computer button in the level section menu. You move by WASD or arrow keys. Space key is used to use items or to fire gun. If level permits the space key and D key to pickup and drop, respectivly.
+
+---
+
 ## Credits
 
 - Music by DesiFreeMusic on Pixabay
