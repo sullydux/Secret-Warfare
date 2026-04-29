@@ -1,6 +1,6 @@
 # Secret Warfare
 
-In a world of secrets and shadows, only the unseen survive. As an elite agent in the Phantom Strike Division, you'll infiltrate, sabotage, and vanish without a trace. With stealth-driven levels and high-tech gear, every mission is a test of precision and nerve. Are you ready to step into the shadows and rewrite the rules of espionage?
+In a world of spies, only the unseen live. As an agent in the Phantom Strike Division, you'll infiltrate, sabotage, and vanish without a trace. With challenging levels and skilled gameplay, every mission is a test of precision and timing. Are you ready to enter the world of warfare and master espionage?
 
 **Official Website:** https://sullydux.github.io/Secret-Warfare/
 
